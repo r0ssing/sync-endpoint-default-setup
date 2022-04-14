@@ -36,7 +36,7 @@ If you don't want the database bootstrap script to run, set the `DB_BOOTSTRAP` e
 
 The default admin account is `cn=admin,dc=example,dc=org`. The default password is `admin`, it can be changed with the `LDAP_ADMIN_PASSWORD` environment variable in `ldap.env`.
 
-The default readonly account is `cn=readonly,dc=example,dc=org`. The defualt password is `readonly`, it can be changed with the `LDAP_READONLY_USER_PASSWORD` environment variable in `ldap.env`. This account is used by the Sync Endpoint to retrieve user information. 
+The default readonly account is `cn=readonly,dc=example,dc=org`. The default password is `readonly`, it can be changed with the `LDAP_READONLY_USER_PASSWORD` environment variable in `ldap.env`. This account is used by the Sync Endpoint to retrieve user information. 
 
 #### Creating users (with phpLDAPadmin)
 
@@ -90,13 +90,13 @@ See [here](http://opendatakit-dev.cs.washington.edu/2_0_tools/release/current_re
 2. Set `security.server.authenticationMethod` in `security.properties` to `dhis2`
 3. [OPTIONAL] Remove OpenLDAP and phpLDAPadmin from [docker-compose.yml](docker-compose.yml)
 
-After restarting your Sync Endpoint server, you will be able to login to Sync Endpoint using the same credentials you use for your DHIS2 server. DHIS2 organization units and groups, with membership preserved, will be converted to Sync Endpoint groups and accesible through the Sync Endpoint REST API. 
+After restarting your Sync Endpoint server, you will be able to login to Sync Endpoint using the same credentials you use for your DHIS2 server. DHIS2 organization units and groups, with membership preserved, will be converted to Sync Endpoint groups and accessible through the Sync Endpoint REST API. 
 
 ## **Warnings**
 
- - The database and the LDAP directory set up here are meant only for testing and evaluation. When running in production you should configure a production ready database and a production ready LDAP directory. Using the pre-configured database and directory in production can result in poor performance and degraded availabiltiy.
+ - The database and the LDAP directory set up here are meant only for testing and evaluation. When running in production you should configure a production ready database and a production ready LDAP directory. Using the pre-configured database and directory in production can result in poor performance and degraded availability.
  - You should refer to Docker Swarm documentation on running a production ready Swarm.
- - We recommend that you host Sync Endpoint on a commercial cloud provider (e.g. Google Cloud Platform, Amazon AWS, Microsoft Azure, etc.) If you want to host Sync Endpoint on premise, you should consult your System Administrator for appropriate hardware.
+ - We recommend that you host Sync Endpoint on a commercial cloud provider (e.g. Google Cloud Platform, Amazon AWS, Microsoft Azure, etc.). If you want to host Sync Endpoint on premise, you should consult your System Administrator for appropriate hardware.
  - Always make regular backups and test your backups to prevent potential data loss. 
 
  See the [Advanced Configuration](#advanced-configuration) for instructions on swapping out the database or LDAP directory. 
