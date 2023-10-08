@@ -23,8 +23,6 @@ sync-endpoint-default-setup is a project that provides a default setup and confi
 8. [Warnings](#warnings)
 9. [Notes](#notes)
 10. [Ubuntu 18.04 Example Installation](#ubuntu-1804-example-installation)
-    - 10.1 [Initial Setup](#initial-setup)
-    - 10.2 [Building and Starting](#building-and-starting)
 
 ## Prerequisites
 - Git
