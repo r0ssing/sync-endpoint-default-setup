@@ -1,3 +1,31 @@
+# sync-endpoint-default-setup
+
+## What is sync-endpoint-default-setup
+sync-endpoint-default-setup is a project that provides a default setup and configuration for the ODK-X Sync Endpoint. ODK-X is a suite of tools and services for data collection, management, and synchronization, often used for field data collection in research, humanitarian work, and other applications.
+
+## Table of Contents
+
+1. [Prerequisites](#prerequisites)
+2. [Build](#build)
+    - 2.1 [Using the init-odkx-sync-endpoint.py script](#using-the-init-odkx-sync-endpointpy-script)
+    - 2.2 [Manual Build Instructions](#manual-build-instructions)
+3. [Run](#run)
+4. [Clean up](#clean-up)
+5. [Configuration](#configuration)
+6. [LDAP](#ldap)
+    - 6.1 [Creating Users (with phpLDAPadmin)](#creating-users-with-phpldapadmin)
+    - 6.2 [Creating Groups (with phpLDAPadmin)](#creating-groups-with-phpldapadmin)
+    - 6.3 [Assigning Users to Groups (with phpLDAPadmin)](#assigning-users-to-groups-with-phpldapadmin)
+    - 6.4 [Using ldap-utils](#using-ldap-utils)
+7. [Advanced Configuration](#advanced-configuration)
+    - 7.1 [Using a Different Database or LDAP Directory](#using-a-different-database-or-ldap-directory)
+    - 7.2 [Managing Identity through DHIS2](#managing-identity-through-dhis2)
+8. [Warnings](#warnings)
+9. [Notes](#notes)
+10. [Ubuntu 18.04 Example Installation](#ubuntu-1804-example-installation)
+    - 10.1 [Initial Setup](#initial-setup)
+    - 10.2 [Building and Starting](#building-and-starting)
+
 ## Prerequisites
 - Git
 - Docker (with swarm mode enabled)
